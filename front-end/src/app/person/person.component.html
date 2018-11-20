@@ -1,0 +1,35 @@
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+
+    <form>
+        <div class="input-field">
+            <input id="search"  type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+        </div>
+
+        <!-- Botão salvar -->
+        <a [routerLink]="['/person/new']" class="btn-floating btn-large waves-effect waves-light z-depth-5 btn-floating-submit">
+            <i class="material-icons">add</i>
+        </a>
+
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Pessoa</h4></li>
+            <li *ngFor="let person of people; let i=index" class="collection-item">
+                <div>
+                    {{person.id}}
+                    {{person.name}}
+                    <a  [routerLink]="['/person']" class="secondary-content"><i class="material-icons">delete</i></a>
+                    <a  [routerLink]="['/person/new', person.id]" class="secondary-content"><i class="material-icons">edit</i></a>
+                </div>
+            </li>                    
+        </ul>
+    </form>
+  
+</div>
+
+<router-outlet></router-outlet>

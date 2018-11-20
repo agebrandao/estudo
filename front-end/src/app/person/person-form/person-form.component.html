@@ -1,0 +1,107 @@
+<form class="col s12 " [formGroup]="formPerson" (ngSubmit)="onSubmit()">
+
+  <div class="container">
+    <ul materialize="collapsible" class="collapsible popout">
+      <li class="collapsible expandable">
+        <div class="collapsible-header active">
+          <i class="material-icons">account_circle</i>Pessoa
+        </div>
+        <!-- <div class="collapsible-body ">  -->
+        <div class="body ">
+
+          <!-- Save button -->
+          <button class="btn-floating btn-large waves-effect waves-light z-depth-5 btn-floating-submit">
+            <i class="material-icons">save</i>
+          </button>
+
+          <div class="row">
+
+            <!-- Person id -->
+            <div class="col s6 m6 l6 ">
+              <input formControlName="id" id="id" type="number" class="validate">
+              <label for="id">Índice</label>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- Person Name -->
+            <div class="input-field col s12 m6 l6">
+              <input formControlName="name" id="name" type="text" class="validate" data-length="30" materialize="characterCounter">
+              <label for="name">Nome</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Nome da pessoa</span>
+            </div>
+
+
+            <!-- Person cpf -->
+            <div class="input-field col s6">
+              <input formControlName="cpf" id="cpf" type="text" class="validate" data-length="11" materialize="characterCounter">
+              <label for="cpf">CPF</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Documento - CPF</span>
+            </div>
+
+
+          </div>
+
+          <div class="row">
+            <!-- Person adress -->
+            <div class="input-field col s12">
+              <input formControlName="adress" id="adress" type="text" class="validate" data-length="50" materialize="characterCounter">
+              <label for="adress">Endereço</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Endereço</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Person city -->
+            <div class="input-field col s12 m6 l6">
+              <input formControlName="city" id="city" type="text" class="validate" data-length="20" materialize="characterCounter">
+              <label for="city">Cidade</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Cidade</span>
+            </div>
+
+            <!-- Person city -->
+            <div class="input-field col s12 m6 l6">
+              <input formControlName="uf" id="uf" type="text" class="validate" data-length="2" materialize="characterCounter">
+              <label for="uf">UF</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Unidade federativa</span>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <!-- Person email -->
+            <div class="input-field col s12 m6 l6">
+              <input formControlName="email" id="email" type="text" class="validate" data-length="30" materialize="characterCounter">
+              <label for="email">E-mail</label>
+              <span class="helper-text" data-error="wrong" data-success="right">E-mail</span>
+            </div>
+
+            <!-- Person telephone -->
+            <div class="input-field col s12 m6 l6">
+              <input formControlName="telephone" id="telephone" type="text" class="validate" data-length="12"
+                materialize="characterCounter">
+              <label for="telephone">Telefone</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Telefone</span>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <!-- Person telephone -->
+            <div class="input-field col s12">
+              <textarea formControlName="obs" id="obs" class="materialize-textarea" data-length="200" materialize="characterCounter"></textarea>
+              <label for="obs">Observação</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Observação</span>
+            </div>
+          </div>
+
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</form>
+
+<router-outlet></router-outlet>
