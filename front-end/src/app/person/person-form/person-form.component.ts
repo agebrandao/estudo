@@ -30,7 +30,7 @@ export class PersonFormComponent implements OnInit {
       id: [null],
       name: [null, [Validators.required, Validators.maxLength(30)]],
       cpf: [null, [Validators.required, Validators.maxLength(11)]],
-      adress: [null, [Validators.required, Validators.maxLength(50)]],
+      address: [null, [Validators.required, Validators.maxLength(50)]],
       city: [null, [Validators.required, Validators.maxLength(20)]],
       uf: [null, [Validators.required, Validators.maxLength(2)]],
       email: [null, [Validators.required, Validators.email]],

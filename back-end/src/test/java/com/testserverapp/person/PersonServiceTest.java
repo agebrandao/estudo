@@ -163,7 +163,7 @@ public class PersonServiceTest {
 
         person.setName("Name Test");
         person.setCpf("54647142949");
-        person.setAdress(" Test Street");
+        person.setAddress(" Test Street");
         person.setCity("Test City");
         person.setUf("PE");
         person.setEmail("emailTest@test.com.br");

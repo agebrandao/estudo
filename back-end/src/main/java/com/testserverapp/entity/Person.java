@@ -28,10 +28,10 @@ public class Person {
     @Size(max = 11)
     private String cpf;
 
-    @Column(name = "adress")
-    @NotEmpty(message = "*Please provide your adress")
+    @Column(name = "address")
+    @NotEmpty(message = "*Please provide your address")
     @Size(max = 50)
-    private String adress;
+    private String address;
 
     @Column(name = "city")
     @NotEmpty(message = "*Please provide city")
@@ -101,17 +101,17 @@ public class Person {
     }
 
     /**
-     * @return the adress
+     * @return the address
      */
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
     /**
-     * @param adress the adress to set
+     * @param address the address to set
      */
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAdress(String address) {
+        this.address = address;
     }
 
      /**
